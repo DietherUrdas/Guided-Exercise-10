@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String url = suggestedURL.getText().toString();
-                if(!url.startsWith("www.") && !url.startsWith("http://") ){
-                    url = "www." + url; } if(!url.startsWith("http://") ){
-                    url = "http://" + url; } browser.loadUrl(url);
+                if(!url.startsWith("www.") && !url.startsWith("https://") ){
+                    url = "www." + url; } if(!url.startsWith("https://") ){
+                    url = "https://" + url; } browser.loadUrl(url);
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                browser.loadUrl("http://www.google.com");
+                browser.loadUrl("https://www.google.com");
             }
         });
     }
